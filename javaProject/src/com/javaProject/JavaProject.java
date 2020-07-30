@@ -8,18 +8,14 @@ import java.util.Scanner;
 public class JavaProject {
 
 	public static void main(String[] args) {
-		
 
 		Scanner scr = null;
 		Scanner scr2 = null;
 		Scanner scr3 = null;
 		try {
-			scr = new Scanner(new File(
-					"D:\\Desktop\\iconnect\\input/cm29JAN2020bhav.csv"));
-			scr2 = new Scanner(new File(
-					"D:\\Desktop\\iconnect\\input/cm30JAN2020bhav.csv"));
-			scr3 = new Scanner(new File(
-					"D:\\Desktop\\iconnect\\input/cm31JAN2020bhav.csv"));
+			scr = new Scanner(new File("D:\\Desktop\\iconnect\\input/cm29JAN2020bhav.csv"));
+			scr2 = new Scanner(new File("D:\\Desktop\\iconnect\\input/cm30JAN2020bhav.csv"));
+			scr3 = new Scanner(new File("D:\\Desktop\\iconnect\\input/cm31JAN2020bhav.csv"));
 			scr.useDelimiter(","); // sets the delimiter pattern
 			scr2.useDelimiter(",");
 			scr3.useDelimiter(",");
@@ -28,15 +24,13 @@ public class JavaProject {
 			avoid(scr3, 13);
 
 			String path = "D:\\Desktop\\iconnect\\output/output1.csv";
-			
+
 			FileWriter fw = new FileWriter(path);
 			fw.write(" Range \n");
 			while (scr2.hasNext()) {
 				double sum = 0;
 
-				System.out.println(scr.next() + "  -->");
-				System.out.println(scr.next() + "  -->");
-				System.out.println(scr.next() + "  -->");
+				avoid(scr, 3);
 				String HIGH1 = scr.next();
 				String LOW1 = scr.next();
 				double range1 = Double.parseDouble(HIGH1) - Double.parseDouble(LOW1);
@@ -45,18 +39,9 @@ public class JavaProject {
 				System.out.println("LOW-->" + LOW1);
 				System.out.println("Range=" + range1 + "-->");
 
-				System.out.println(scr.next() + "  -->");
-				System.out.println(scr.next() + "  -->");
-				System.out.println(scr.next() + "  -->");
-				System.out.println(scr.next() + "  -->");
-				System.out.println(scr.next() + "  -->");
-				System.out.println(scr.next() + "  -->");
-				System.out.println(scr.next() + "  -->");
-				System.out.println(scr.next() + "  -->");
+				avoid(scr, 8);
 
-				System.out.println(scr2.next() + "  -->");
-				System.out.println(scr2.next() + "  -->");
-				System.out.println(scr2.next() + "  -->");
+				avoid(scr2, 3);
 				String HIGH2 = scr2.next();
 				String LOW2 = scr2.next();
 				double range2 = Double.parseDouble(HIGH2) - Double.parseDouble(LOW2);
@@ -65,18 +50,9 @@ public class JavaProject {
 				System.out.println("LOW-->" + LOW2);
 				System.out.println("Range=" + range2 + "-->");
 
-				System.out.println(scr2.next() + "  -->");
-				System.out.println(scr2.next() + "  -->");
-				System.out.println(scr2.next() + "  -->");
-				System.out.println(scr2.next() + "  -->");
-				System.out.println(scr2.next() + "  -->");
-				System.out.println(scr2.next() + "  -->");
-				System.out.println(scr2.next() + "  -->");
-				System.out.println(scr2.next() + "  -->");
+				avoid(scr2, 8);
 
-				System.out.println(scr3.next() + "  -->");
-				System.out.println(scr3.next() + "  -->");
-				System.out.println(scr3.next() + "  -->");
+				avoid(scr3, 3);
 				String HIGH3 = scr3.next();
 				String LOW3 = scr3.next();
 				double range3 = Double.parseDouble(HIGH3) - Double.parseDouble(LOW3);
@@ -85,36 +61,28 @@ public class JavaProject {
 				System.out.println("LOW-->" + LOW3);
 				System.out.println("Range=" + range3 + "-->");
 
-				System.out.println(scr3.next() + "  -->");
-				System.out.println(scr3.next() + "  -->");
-				System.out.println(scr3.next() + "  -->");
-				System.out.println(scr3.next() + "  -->");
-				System.out.println(scr3.next() + "  -->");
-				System.out.println(scr3.next() + "  -->");
-				System.out.println(scr3.next() + "  -->");
-				System.out.println(scr3.next() + "  -->");
+				avoid(scr3, 8);
 
 				sum = (range1 + range2 + range3);
 
 				String conn = Double.toString(sum) + "\n";
-				// System.out.println("sum= "+sum);
+
 				fw.write(conn + "  ");
-				// System.out.println(fw);
 
 			}
 
 			fw.flush();
 			fw.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		} finally {
 			if (scr != null)
 				scr.close(); // closes the scanner
 			if (scr2 != null)
-				scr2.close();
+				scr2.close();// closes the scanner
 			if (scr3 != null)
-				scr3.close();
+				scr3.close();// closes the scanner
 		}
 
 	}
@@ -122,7 +90,7 @@ public class JavaProject {
 	private static void avoid(Scanner scr, int j) {
 		for (int i = 0; i < j; i++) {
 
-			System.out.println(scr.next() + "  -->");
+			scr.next();
 		}
 
 	}
