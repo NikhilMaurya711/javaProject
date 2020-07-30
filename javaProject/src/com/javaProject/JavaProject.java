@@ -8,18 +8,18 @@ import java.util.Scanner;
 public class JavaProject {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 
 		Scanner scr = null;
 		Scanner scr2 = null;
 		Scanner scr3 = null;
 		try {
 			scr = new Scanner(new File(
-					"C:\\Users\\NIkhil\\workspace\\File handling\\sample folder\\sample2/cm29JAN2020bhav.csv"));
+					"D:\\Desktop\\iconnect\\input/cm29JAN2020bhav.csv"));
 			scr2 = new Scanner(new File(
-					"C:\\Users\\NIkhil\\workspace\\File handling\\sample folder\\sample2/cm30JAN2020bhav.csv"));
+					"D:\\Desktop\\iconnect\\input/cm30JAN2020bhav.csv"));
 			scr3 = new Scanner(new File(
-					"C:\\Users\\NIkhil\\workspace\\File handling\\sample folder\\sample2/cm31JAN2020bhav.csv"));
+					"D:\\Desktop\\iconnect\\input/cm31JAN2020bhav.csv"));
 			scr.useDelimiter(","); // sets the delimiter pattern
 			scr2.useDelimiter(",");
 			scr3.useDelimiter(",");
@@ -27,9 +27,8 @@ public class JavaProject {
 			avoid(scr2, 13);
 			avoid(scr3, 13);
 
-			String path = "D:\\Desktop\\iconnect/output1.csv";
-			// File file = new File(path);
-			// file.createNewFile();
+			String path = "D:\\Desktop\\iconnect\\output/output1.csv";
+			
 			FileWriter fw = new FileWriter(path);
 			fw.write(" Range \n");
 			while (scr2.hasNext()) {
