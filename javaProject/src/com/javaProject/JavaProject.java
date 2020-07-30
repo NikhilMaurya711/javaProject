@@ -35,8 +35,6 @@ public class JavaProject {
 				String LOW1 = scr.next();
 				double range1 = Double.parseDouble(HIGH1) - Double.parseDouble(LOW1);
 
-				System.out.println("HIGH-->" + HIGH1);
-				System.out.println("LOW-->" + LOW1);
 				System.out.println("Range=" + range1 + "-->");
 
 				avoid(scr, 8);
@@ -46,8 +44,6 @@ public class JavaProject {
 				String LOW2 = scr2.next();
 				double range2 = Double.parseDouble(HIGH2) - Double.parseDouble(LOW2);
 
-				System.out.println("HIGH-->" + HIGH2);
-				System.out.println("LOW-->" + LOW2);
 				System.out.println("Range=" + range2 + "-->");
 
 				avoid(scr2, 8);
@@ -57,8 +53,6 @@ public class JavaProject {
 				String LOW3 = scr3.next();
 				double range3 = Double.parseDouble(HIGH3) - Double.parseDouble(LOW3);
 
-				System.out.println("HIGH-->" + HIGH3);
-				System.out.println("LOW-->" + LOW3);
 				System.out.println("Range=" + range3 + "-->");
 
 				avoid(scr3, 8);
